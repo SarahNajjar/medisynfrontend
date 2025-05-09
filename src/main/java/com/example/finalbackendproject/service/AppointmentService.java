@@ -47,4 +47,8 @@ public class AppointmentService {
     public List<Appointment> findFilteredAppointments(Integer id, Integer patientId, Integer doctorId, Integer roomId, LocalDate date, Appointment.AppointmentStatus status) {
         return appointmentRepository.findFilteredAppointments(id, patientId, doctorId, roomId, date, status);
     }
+
+    public Double getBillingAmount(Integer appointmentId) {
+        return appointmentRepository.getBillingAmount(appointmentId);
+    }
 }
